@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal Portfolio of Ahmed Elmannan">
+    <title> Ahmed Elmannan | IT Professional</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo.png" alt="Ahmed Elmannan Logo">
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Hi, I'm Ahmed Elmannan, an IT professional with seven years expertise in Information Technology.</p>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I specialize in diagnosing and resolving technical issues, configuring and maintaining network devices, and managing Windows and Linux servers, and bring a comprehensive skill set to the table.
+            <br>
+            My experience extends to security management, including firewall configuration and compliance with security protocols, which protect data and organizational systems.
+            <br>
+            <br>
+            In addition to technical prowess in customer service, effective communication with end users, and providing essential training and support.
+            <br><br>
+            With strong project management skills, I was able to efficiently lead IT projects, coordinate with vendors, and ensure adherence to budgets and timelines.
+            <br><br>
+            Commit to keeping pace with the latest technological developments and continuously improving IT operations to enhance organizational efficiency and security.
+        </p>
+        <br><br>
+        <p><h1>Skills:</h1> Technical Support and Network Management, Server Management, Documentation and Customer Service, Project Management.</p>
+    </section>
+
+    <section id="portfolio">
+        <h2>Services</h2>
+        <div class="Services">
+            <h3>Technical Support</h3>
+            <p>Technical support for end-user devices and peripherals | In-person and remotely</p>
+        </div>
+        <div class="Services">
+            <h3>Configure and set up networks and servers</h3>
+            <p>Configure new servers and networks and reconfigure and maintain existing networks and servers | configuration and Repair </p>
+        </div>
+        <div class="Services">
+            <h3>Network security</h3>
+            <p>Securing internal networks and email servers from phishing attacks and cybersecurity attacks, and protecting the organization’s internal systems.</p>
+        </div>
+        <div class="Services">
+            <h3>Project Management</h3>
+            <p>Developing plans and policies, coordinating the IT department, managing resources and equipment, and implementing projects</p>
+        </div>
+        <!-- Add more projects as needed -->
+    </section>
+
+    <section id="resume">
+        <h2>Resume</h2>
+        <p>Download my resume: <a href="https://drive.google.com/file/d/1puXpBj7emTeAuhZmfg1agNm3VY6DEz-C/view?usp=drive_link" download>Download Resume</a></p>
+        <p>Summary of experience, education, and skills.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Ahmed Elmannan. All rights reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the form
+            const form = document.getElementById('contact-form');
+
+            // Add submit event listener
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the form from submitting
+
+                // Perform form submission using fetch or AJAX if needed
+                // Example: performFormSubmission(form);
+
+                // Clear the form after submission
+                form.reset();
+            });
+        });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
