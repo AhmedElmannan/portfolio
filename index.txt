@@ -3,33 +3,243 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal Portfolio of Ahmed Elmannan">
-    <title> Ahmed Elmannan | IT Professional</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Profile of Ahmed Elmannan">
+    <title>Ahmed Elmannan | IT Professional</title>
+    <style>
+
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header and Navigation */
+        header {
+            background: #2c3e50; /* Navy Blue */
+            color: #ecf0f1; /* Light Gray */
+            padding: 0.5rem 0; /* Reduced padding */
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 40px; /* Reduced height */
+            margin-right: 30px; /* Reduced margin */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 10px; /* Reduced margin */
+        }
+
+        nav ul li a {
+            color: #ecf0f1; /* Light Gray */
+            text-decoration: none;
+            font-size: 1rem; /* Slightly smaller font size */
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #e74c3c; /* Coral */
+        }
+        /* Sections */
+        section {
+            padding: 2rem 1rem; /* Reduced padding */
+            margin: 1rem 0; /* Reduced margin */
+            background: #ecf0f1; /* Light Gray */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            animation: fadeIn 1s ease-in;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Home Section */
+        #home {
+            background: #2c3e50; /* Navy Blue */
+            color: #ecf0f1; /* Light Gray */
+            text-align: center;
+            padding: 0.1rem 0.1rem; /* Reduced padding */
+            border-radius: 1;
+        }
+
+        #home h1 {
+            font-size: 2.5rem; /* Slightly smaller font size */
+            margin-bottom: 0.5rem; /* Reduced margin */
+        }
+
+        #home p {
+            font-size: 1rem; /* Slightly smaller font size */
+        }
+
+        /* About Section */
+        #about {
+            background: #bdc3c7; /* Lighter Gray */
+        }
+
+        /* Portfolio Section */
+        #portfolio {
+            background: #bdc3c7; /* Lighter Gray */
+        }
+
+        #portfolio .Services {
+            background: #bdc3c7; /* Lighter Gray */
+            padding: 1rem;
+            margin-bottom: 1rem; /* Reduced margin */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #portfolio .Services h3 {
+            color: #333; /* Black */
+        }
+
+        /* Resume Section */
+        #resume {
+            background: #bdc3c7; /* Lighter Gray */
+            padding: 0.5rem 1rem; /* Reduced padding */
+            border-radius: 4px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #resume h2 {
+            font-size: 1.5rem; /* Slightly smaller font size */
+            margin-bottom: 1rem; /* Reduced margin */
+        }
+
+        #resume ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        #resume ul li {
+            margin-bottom: 0.5rem; /* Reduced margin */
+        }
+
+        /* Contact Section */
+        #contact {
+            background: #bdc3c7; /* Lighter Gray */
+            padding: 1rem 1rem; /* Adjusted padding */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #contact h2 {
+            font-size: 2.5rem; /* Slightly smaller font size */
+            margin-bottom: 1rem; /* Reduced margin */
+            text-align: center;
+        }
+
+        #contact .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        #contact form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #contact form label {
+            margin-bottom: 0.5rem; /* Reduced margin */
+        }
+
+        #contact form input,
+        #contact form textarea,
+        #contact form button {
+            padding: 0.5rem;
+            margin-bottom: 1rem; /* Reduced margin */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s ease;
+        }
+
+        #contact form input:focus,
+        #contact form textarea:focus {
+            outline: none;
+            border-color: #2c3e50; /* Navy Blue */
+        }
+
+        #contact form button {
+            background: #2c3e50; /* Navy Blue */
+            color: #ecf0f1; /* Light Gray */
+            cursor: pointer;
+            transition: background 0.3s ease;
+            border: none;
+        }
+
+        #contact form button:hover {
+            background: #34495e; /* Slightly lighter Navy Blue */
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 0.1rem 0; /* Reduced padding */
+            background: #2c3e50; /* Navy Blue */
+            color: #ecf0f1; /* Light Gray */
+            position: relative;
+            width: 100%;
+            margin-top: 0rem; /* Adjusted margin */
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <nav>
             <div class="logo">
-                <img src="logo.png" alt="[Your Name] Logo">
+                <img src="logo.png" alt="Ahmed Elmannan Logo">
             </div>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About Me</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#resume">Resume</a></li>
+                <li><a href="#portfolio">Services</a></li>
+                <li><a href="#resume">Profile</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
     
     <section id="home">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Hi, I'm Ahmed Elmannan, an IT professional with seven years expertise in Information Technology.</p>
+        <h1>Welcome </h1>
+        <p> IT professional with seven years expertise in Information Technology.</p>
     </section>
 
     <section id="about">
-        <h2>About Me</h2>
+        <h2>Bio</h2>
         <p>I specialize in diagnosing and resolving technical issues, configuring and maintaining network devices, and managing Windows and Linux servers, and bring a comprehensive skill set to the table.
             <br>
             My experience extends to security management, including firewall configuration and compliance with security protocols, which protect data and organizational systems.
@@ -48,47 +258,84 @@
     <section id="portfolio">
         <h2>Services</h2>
         <div class="Services">
-            <h3>Technical Support</h3>
-            <p>Technical support for end-user devices and peripherals | In-person and remotely</p>
+            <h3>Technical Expertise</h3>
+            <p>- Diagnosed and resolved technical issues, bringing a comprehensive skill set to the table.
+                <br>
+                - Configured and maintained network devices, ensuring optimal performance.
+                <br>
+                - Managed Windows and Linux servers to support diverse business operations.
+            </p>
         </div>
         <div class="Services">
-            <h3>Configure and set up networks and servers</h3>
-            <p>Configure new servers and networks and reconfigure and maintain existing networks and servers | configuration and Repair </p>
+            <h3>Security Management</h3>
+            <p>- Handled security management through robust firewall configuration.
+                <br>
+                - Ensured compliance with security protocols, protecting data and organizational systems.
+            </p>
         </div>
         <div class="Services">
-            <h3>Network security</h3>
-            <p>Securing internal networks and email servers from phishing attacks and cybersecurity attacks, and protecting the organization’s internal systems.</p>
+            <h3>Customer Support</h3>
+            <p>- Facilitated effective communication with end users.
+                <br>
+                - Provided essential training and support to enhance user proficiency.
+                <br>
+                - Delivered technical prowess in customer service, ensuring positive user experiences.
+            </p>
         </div>
         <div class="Services">
             <h3>Project Management</h3>
-            <p>Developing plans and policies, coordinating the IT department, managing resources and equipment, and implementing projects</p>
+            <p>- Led IT projects efficiently from conception to completion.
+                <br>
+                - Coordinated with vendors to source the best solutions.
+                <br>
+                - Ensured adherence to budgets and timelines through strong project management skills.
+            </p>
         </div>
-        <!-- Add more projects as needed -->
-    </section>
-
-    <section id="resume">
-        <h2>Resume</h2>
-        <p>Download my resume: <a href="https://drive.google.com/file/d/1puXpBj7emTeAuhZmfg1agNm3VY6DEz-C/view?usp=drive_link" download>Download Resume</a></p>
-        <p>Summary of experience, education, and skills.</p>
-    </section>
-
-    <section id="contact">
-        <h2>Contact</h2>
-        <form id="contact-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Ahmed Elmannan. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+        <div class="Services">
+            <h3>Continuous Improvement</h3>
+            <p>- Kept pace with the latest technological developments.
+                <br>
+                - Continuously improved IT operations to enhance organizational efficiency and security.
+                </p>
+        </div>
+        </section>
+        
+        <section id="resume">
+            <h2>Profile</h2>
+            <p>Download my profile: <a href="https://drive.google.com/file/d/1x0BgCRz96uAJYwCoiizIFubeKIcbtM-f/view?usp=sharing" download>Download</a></p>
+            <p>Summary of experience, education, and skills.</p>
+        </section>
+    
+        
+        <section id="contact">
+            <h2>Contact with me </h2>
+            <div class="container">
+                <form action="https://formspree.io/f/xgegqgnn" method="POST" enctype="multipart/form-data" id="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your name.." required>
+                
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your email.." required>
+                
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" placeholder="Write something.." style="height:200px" required></textarea>
+                
+                    <button type="submit" onclick="clearForm()">Submit</button>
+                </form>                
+            </div>
+        </section>
+        
+        <footer>
+            <div class="contact-info">
+            <p>Email: <a href="mailto:ahmed.elmannan@example.com">ahmed.elmannan@gmail.com</a> | Phone: (966) 575250991 - (966) 550635615 </p>
+            </div>
+            <p>&copy; 2024 Ahmed Elmannan. All rights reserved.</p>
+            <p>
+                <a href="https://wa.me/966575250991" target="_blank" title="WhatsApp">
+                    <i class="fab fa-whatsapp"></i> Start a Chat in WhatsApp
+                </a>
+            </p>
+        </footer>
+        </body>
+        </html>
+        
